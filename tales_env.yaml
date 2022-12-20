@@ -1,0 +1,16 @@
+name: tales_env
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - transformers
+  - pytorch
+  - requests
+  - scikit-learn
+  - scipy
+  - pyYAML
+  - tqdm
+  - numpy
+  - pandas
+  - click

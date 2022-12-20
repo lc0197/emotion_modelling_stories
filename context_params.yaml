@@ -1,0 +1,44 @@
+baseline_lstm:
+  model_type: lstm
+  lstm_num_layers: 2
+  lstm_out_dim: 128
+  embeddings: electra-large-trained
+  batch_size: 32
+  window_size: 10
+  step_size: 4
+  max_epochs: 20
+  patience: 5
+  num_seeds: 5
+  seed: 101
+  lr: 0.0005
+  padding_idx: 15000
+  emb_dropout: 0.2
+  dropout: 0.5
+  regularization: 0.
+  hidden_dim: 64
+
+
+baseline_lstm_transformer:
+  model_type: lstm_transformer
+  embeddings: electra-large-trained
+  lstm_num_layers: 2
+  lstm_out_dim: 256
+  batch_size: 32
+  window_size: 10
+  step_size: 2
+  max_epochs: 20
+  patience: 5
+  num_seeds: 5
+  seed: 101
+  lr: 0.001
+  padding_idx: 15000
+  emb_dropout: 0.2
+  lstm_dropout: 0.1
+  transformer_dropout: 0.5
+  dropout: 0.5
+  num_heads: 2
+  num_transformer_layers: 2
+  dim_feedforward: 2048
+  regularization: 0.
+  mask_windowing: 1
+  hidden_dim: 64

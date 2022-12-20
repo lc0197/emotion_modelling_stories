@@ -1,0 +1,236 @@
+context_lr1:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: naive_lr
+        naive_lr_sampling_max_l: 1
+        naive_lr_sampling_max_r: 1
+        naive_lr_preference: l
+
+context_lr2:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: naive_lr
+        naive_lr_sampling_max_l: 2
+        naive_lr_sampling_max_r: 2
+        naive_lr_preference: l
+
+
+context_lr4:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: naive_lr
+        naive_lr_sampling_max_l: 4
+        naive_lr_sampling_max_r: 4
+        naive_lr_preference: l
+
+
+context_lr8:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: naive_lr
+        naive_lr_sampling_max_l: 8
+        naive_lr_sampling_max_r: 8
+        naive_lr_preference: l
+
+context_lr_unbounded:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: naive_lr
+        naive_lr_sampling_max_l: 1024
+        naive_lr_sampling_max_r: 1024
+        naive_lr_preference: l
+
+baseline_experiment:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: dummy
+
+
+context_l1:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: l
+        max_context: 1
+
+context_l2:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: l
+        max_context: 2
+
+
+context_l4:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: l
+        max_context: 4
+
+
+context_l8:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: l
+        max_context: 8
+
+
+context_l_unbounded:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: l
+        max_context: 1024
+
+
+context_r1:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: r
+        max_context: 1
+
+context_r2:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: r
+        max_context: 2
+
+
+context_r4:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: r
+        max_context: 4
+
+
+context_r8:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: r
+        max_context: 8
+
+
+context_r_unbounded:
+  model_backend: google/electra-base-discriminator
+  batch_size: 4
+  max_epochs: 5
+  patience: 1
+  num_seeds: 5
+  dropout: 0.5
+  seed: 101
+  lr: 0.000005
+  samplers:
+      - type: context
+        side: r
+        max_context: 1024
